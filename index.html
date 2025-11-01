@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./assets/css/stylesheet.css">
 
 </head>
@@ -32,18 +32,30 @@
                         </div>
                     </div>
                     <div class="flex flex-col space-y-5 mt-10">
-                        <li class="btn btn-outline-light btn-lg mb-2" data-section="dashboard-section">Dashboard</li>
-                        <li class="btn btn-outline-light btn-lg mb-2" data-section="expense-section">Expenses</li>
-                        <li class="btn btn-outline-light btn-lg mb-2" data-section="wallet-section">Wallets</li>
-                        <li class="btn btn-outline-light btn-lg mb-2" data-section="summary-section">Summary</li>
-                        <li class="btn btn-outline-light btn-lg mb-2" data-section="account-section">Accounts</li>
-                        <li class="btn btn-outline-light btn-lg" data-section="settings-section">Settings</li>
+                        <button
+                            class="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white-500 hover:border-transparent rounded mb-8"
+                            data-section="dashboard-section">Dashboard</button>
+                        <button
+                            class="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white-500 hover:border-transparent rounded mb-8"
+                            data-section="expense-section">Expenses</button>
+                        <button
+                            class="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white-500 hover:border-transparent rounded mb-8"
+                            data-section="wallet-section">Wallets</button>
+                        <button
+                            class="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white-500 hover:border-transparent rounded mb-8"
+                            data-section="summary-section">Summary</button>
+                        <button
+                            class="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white-500 hover:border-transparent rounded mb-8"
+                            data-section="account-section">Accounts</button>
+                        <button
+                            class="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white-500 hover:border-transparent rounded mb-8"
+                            data-section="settings-section">Settings</button>
                     </div>
                 </div>
 
             </div>
 
-            <div class="flex bg-white w-[1360px] rounded-3xl">
+            <div class="flex bg-white w-[1370px] rounded-3xl ml-4">
 
                 <!-- Main Contents Section -->
 
@@ -52,8 +64,65 @@
                     <!-- Dashboard-Section  -->
 
                     <div id="dashboard-section"
-                        class="content-section bg-white rounded-3xl p-6 shadow-sm w-[1000px] h-full">
+                        class="content-section bg-white rounded-3xl p-6 shadow-sm w-[1000px] h-full ">
+                        <div class="mt-4 mb-10">
+                            <h1 class="font-bold text-5xl mb-2">SPENZER</h1>
+                            <h2 class="font-semibold text-xl">Your personal financial Overview</h2>
+                        </div>
 
+                        <div class="grid grid-cols-2 gap-4">
+
+                            <div class="bg-blue-50 w-full h-[180px] rounded-3xl p-8">
+                                <h3 class="text-black text-center text-3xl font-semibold mb-4">Account Balance</h3>
+                                <h1 class="text-center text-6xl font-bold text-green-500">$ 78,000.65</h1>
+                            </div>
+
+                            <div class="bg-blue-50 w-full h-[180px] rounded-3xl p-8">
+                                <h1 class="text-black text-center text-3xl font-semibold mb-4">Total Income</h1>
+                                <h2 class="text-center text-6xl font-bold text-blue-500">$ 12,500.00</h2>
+                                <p class="text-center text-sm text-gray-400">Last updated: 01 March, 2025</p>
+                            </div>
+
+                            <div class="col-span-2 bg-blue-50 w-full h-[410px] rounded-3xl p-9">
+                                <h1 class="text-black text-center text-3xl font-semibold mb-4">Last transactions</h1>
+                                <div class="h-[280px] bg-white rounded-2xl p-3">
+                                    <!-- Transactions Entry  -->
+
+                                    <div class="space-y-4 rounded-3xl bg-gray-50 p-2 mb-3">
+                                        <div class="flex justify-between items-center">
+                                            <div class="flex items-center space-x-3  ">
+                                                <div
+                                                    class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                                                    🍽️</div>
+                                                <div>
+                                                    <p class="font-semibold text-gray-800">Food</p>
+                                                    <p class="text-sm text-gray-400">7:30 pm • Hell's Kitchen</p>
+                                                </div>
+                                            </div>
+                                            <p class="text-red-500 font-medium">-600</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-4 rounded-3xl bg-gray-50 p-2 mb-3">
+                                        <div class="flex justify-between items-center">
+                                            <div class="flex items-center space-x-3  ">
+                                                <div
+                                                    class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                                                    🛒</div>
+                                                <div>
+                                                    <p class="font-semibold text-gray-800">Grocery</p>
+                                                    <p class="text-sm text-gray-400">5:12 pm • Belanja di pasar</p>
+                                                </div>
+                                            </div>
+                                            <p class="text-red-500 font-medium">-326.8</p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                     <!-- Expense-Section  -->
@@ -62,8 +131,8 @@
                         id="expense-section">
                         <div class="flex justify-between items-center">
                             <div>
-                                <h2 class="text-2xl font-bold">Expenses</h2>
-                                <p class="text-gray-500 text-sm">01 - 25 March, 2025</p>
+                                <h2 class="text-5xl font-bold mb-2">Expenses</h2>
+                                <p class="text-gray-500 text-sm font-bold">01 - 25 March, 2025</p>
                             </div>
                             <div class="flex -space-x-2">
                                 <img src="./assets/image/profile-1.jpg"
@@ -86,7 +155,7 @@
 
                             <!-- Entry List -->
 
-                            <div class="space-y-4 rounded-3xl bg-gray-50 p-2">
+                            <div class="space-y-4 rounded-3xl bg-gray-50 p-2 mb-3">
                                 <div class="flex justify-between items-center">
                                     <div class="flex items-center space-x-3  ">
                                         <div
@@ -97,9 +166,25 @@
                                             <p class="text-sm text-gray-400">5:12 pm • Belanja di pasar</p>
                                         </div>
                                     </div>
-                                    <p class="text-red-500 font-medium">-326.800</p>
+                                    <p class="text-red-500 font-medium">-326.8</p>
                                 </div>
                             </div>
+
+                            <div class="space-y-4 rounded-3xl bg-gray-50 p-2 mb-3">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center space-x-3  ">
+                                        <div
+                                            class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                                            🍽️</div>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Food</p>
+                                            <p class="text-sm text-gray-400">7:30 pm • Hell's Kitchen</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-red-500 font-medium">-600</p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 

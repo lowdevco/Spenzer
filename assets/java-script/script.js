@@ -1,7 +1,7 @@
 
 //  Section Switching Script 
 
-const buttons = document.querySelectorAll('.btn-outline-light');
+const buttons = document.querySelectorAll('.border-white-500');
 const sections = document.querySelectorAll('.content-section');
 
 buttons.forEach(btn => {
