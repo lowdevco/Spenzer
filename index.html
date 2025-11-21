@@ -146,7 +146,37 @@
                             </div>
                         </div>
 
-                        <div class="h-24 bg-blue-50 mt-6 rounded-md"></div>
+                        <div class="h-24 bg-blue-50 mt-6 rounded-md p-3 flex items-center">
+                            <button
+                                class="w-14 h-14 rounded-full bg-blue-200 text-gray-600 text-xl flex items-center justify-center text-bold mt-[10px] ml-[10px] hover:bg-blue-300" id="addExpenseBtn">+</button>
+                            <div class="inline-block">
+                                <h3 class="font-bold text-2xl ml-5">Add New Expenses</h3>
+                            </div>
+                        </div>
+                        <!-- Popup -->
+                        <div id="popup"
+                            class="fixed inset-0 bg-black-40  items-center hidden justify-center ml-[850px] mt-[150px]">
+                            <div class="bg-white p-6 rounded-xl w-80 shadow-lg">
+                                <h2 class="text-lg font-bold mb-4">Add New Expense</h2>
+
+                                <label class="text-sm">Name</label>
+                                <input id="expName" type="text" class="w-full border rounded-lg p-2 mb-3">
+
+                                <label class="text-sm">Date</label>
+                                <input id="expDate" type="date" class="w-full border rounded-lg p-2 mb-3">
+
+                                <label class="text-sm">Description</label>
+                                <input id="expDesc" type="text" class="w-full border rounded-lg p-2 mb-3">
+
+                                <label class="text-sm">Amount</label>
+                                <input id="expAmount" type="number" class="w-full border rounded-lg p-2 mb-4">
+
+                                <div class="flex justify-end gap-3">
+                                    <button id="closePopup" class="px-4 py-2 rounded-lg border">Cancel</button>
+                                    <button id="saveExp" class="px-4 py-2 bg-black text-white rounded-lg">Add</button>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="mt-6">
                             <div>
@@ -154,37 +184,11 @@
                             </div>
 
                             <!-- Entry List -->
+                            <div class="expense-container overflow-auto bg-gray-100 h-[480px] p-3 rounded-2xl" id="expenseList">
 
-                            <div class="space-y-4 rounded-3xl bg-gray-50 p-2 mb-3">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center space-x-3  ">
-                                        <div
-                                            class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white">
-                                            🛒</div>
-                                        <div>
-                                            <p class="font-semibold text-gray-800">Grocery</p>
-                                            <p class="text-sm text-gray-400">5:12 pm • Belanja di pasar</p>
-                                        </div>
-                                    </div>
-                                    <p class="text-red-500 font-medium">-326.8</p>
-                                </div>
+                                <!-- Input By Java-Script  -->
+
                             </div>
-
-                            <div class="space-y-4 rounded-3xl bg-gray-50 p-2 mb-3">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center space-x-3  ">
-                                        <div
-                                            class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white">
-                                            🍽️</div>
-                                        <div>
-                                            <p class="font-semibold text-gray-800">Food</p>
-                                            <p class="text-sm text-gray-400">7:30 pm • Hell's Kitchen</p>
-                                        </div>
-                                    </div>
-                                    <p class="text-red-500 font-medium">-600</p>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
